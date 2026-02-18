@@ -15,6 +15,6 @@ document.getElementById("login-btn").addEventListener("click", function () {
   ) {
     alert("invalid pin or number");
   }else{
-    window.location.assign("/home.html")
+    window.location.assign("home.html")
   }
 });
