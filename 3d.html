@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- daisyUI & Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    
+    <style>
+      * { font-family: "Outfit", sans-serif; }
+    </style>
+  </head>
+  <body class="w-full md:w-[450px] mx-auto bg-gray-50 min-h-screen">
+    
+    <!-- Header -->
+    <header class="flex justify-between items-center p-8 bg-white shadow-sm rounded-b-3xl">
+      <div class="flex gap-4 items-center">
+        <div class="w-12 h-12">
+          <!-- Logo Placeholder -->
+          <img src="https://img.icons8.com/color/48/wallet--v1.png" alt="logo" />
+        </div>
+        <div>
+          <h1 class="text-2xl font-extrabold text-gray-800">
+            $ <span id="current-balance">4500</span>
+          </h1>
+          <p class="text-sm text-gray-400">Available balance</p>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-sm btn-ghost border border-gray-200 text-gray-400">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Features Section -->
+    <section class="px-6 mt-8">
+      <h1 class="font-bold text-2xl mb-2 text-gray-800">Welcome to Pay<span class="text-blue-600">oo</span></h1>
+      <p class="text-sm text-gray-400 mb-6">Enjoy easy and convenient financial services with us.</p>
+
+      <div class="grid grid-cols-3 gap-3">
+        <!-- Add Money Button -->
+        <button id="show-add-money" class="card bg-white shadow-sm p-4 flex flex-col items-center justify-center gap-2 hover:bg-gray-100 transition border border-gray-100 rounded-2xl h-28">
+            <i class="fa-solid fa-wallet text-2xl text-blue-600"></i>
+            <p class="text-xs font-semibold text-gray-600">Add Money</p>
+        </button>
+
+        <!-- Cash Out Button -->
+        <button id="show-cash-out" class="card bg-white shadow-sm p-4 flex flex-col items-center justify-center gap-2 hover:bg-gray-100 transition border border-gray-100 rounded-2xl h-28">
+            <i class="fa-solid fa-money-bill-transfer text-2xl text-red-500"></i>
+            <p class="text-xs font-semibold text-gray-600">Cashout</p>
+        </button>
+
+        <!-- Dummy Button -->
+        <button class="card bg-white shadow-sm p-4 flex flex-col items-center justify-center gap-2 border border-gray-100 rounded-2xl h-28 opacity-50 cursor-not-allowed">
+            <i class="fa-solid fa-user text-2xl text-green-500"></i>
+            <p class="text-xs font-semibold text-gray-600">Transfer</p>
+        </button>
+      </div>
+    </section>
+
+    <!-- FORM: Add Money Section (Initially Hidden) -->
+    <section id="add-money-form" class="hidden mt-6 px-6 pb-10">
+      <div class="bg-white p-6 rounded-3xl shadow-lg border border-gray-100">
+        <h2 class="text-lg font-bold mb-4 text-blue-600">Add Money</h2>
+        <form id="form-add-money">
+            <label class="label"><span class="label-text font-bold">Bank Account Number</span></label>
+            <input id="add-money-number" type="text" placeholder="Enter 11 digit number" class="input input-bordered w-full rounded-full bg-gray-50 border-none mb-2" maxlength="11" />
+            
+            <label class="label"><span class="label-text font-bold">Amount</span></label>
+            <input id="add-money-amount" type="number" placeholder="Enter amount to add" class="input input-bordered w-full rounded-full bg-gray-50 border-none mb-2" />
+            
+            <label class="label"><span class="label-text font-bold">Pin Number</span></label>
+            <input id="add-money-pin" type="password" placeholder="Enter 4 digit pin" class="input input-bordered w-full rounded-full bg-gray-50 border-none mb-4" maxlength="4" />
+            
+            <button id="btn-add-money" class="btn w-full rounded-full bg-blue-600 text-white hover:bg-blue-700 text-lg">Add Money</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FORM: Cash Out Section (Initially Hidden) -->
+    <section id="cash-out-form" class="hidden mt-6 px-6 pb-10">
+      <div class="bg-white p-6 rounded-3xl shadow-lg border border-gray-100">
+        <h2 class="text-lg font-bold mb-4 text-red-500">Cash Out</h2>
+        <form>
+            <label class="label"><span class="label-text font-bold">Agent Number</span></label>
+            <input id="cash-out-number" type="text" placeholder="Enter 11 digit number" class="input input-bordered w-full rounded-full bg-gray-50 border-none mb-2" maxlength="11" />
+            
+            <label class="label"><span class="label-text font-bold">Amount</span></label>
+            <input id="cash-out-amount" type="number" placeholder="Enter amount to withdraw" class="input input-bordered w-full rounded-full bg-gray-50 border-none mb-2" />
+            
+            <label class="label"><span class="label-text font-bold">Pin Number</span></label>
+            <input id="cash-out-pin" type="password" placeholder="Enter 4 digit pin" class="input input-bordered w-full rounded-full bg-gray-50 border-none mb-4" maxlength="4" />
+            
+            <button id="btn-cash-out" class="btn w-full rounded-full bg-red-500 text-white hover:bg-red-600 text-lg">Withdraw Money</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./script/3d.js"></script>
+  </body>
+</html>
