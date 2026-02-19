@@ -49,12 +49,21 @@ const navBtn = document.querySelectorAll(".btn-tab");
 navBtn.forEach((button) => {
   button.addEventListener("click", function () {
     const targetSection = this.getAttribute("data-id");
-    toggleSections(targetSection, button);
+
+    navBtn.forEach((btn) => {
+      btn.classList.remove("bg-blue-700", "text-white");
+      btn.classList.add("btn-soft", "border-neutral/10");
+    });
+
+    this.classList.remove("btn-soft", "border-neutral/10");
+    this.classList.add("bg-blue-700", "text-white");
+    if (targetSection) {
+      toggleSections(targetSection);
+    }
   });
 });
 
 function toggleSections(id) {
-
   document.getElementById("addMoney-section").classList.add("hidden");
   document.getElementById("cash-out-section").classList.add("hidden");
   document.getElementById("Transfer-Money-section").classList.add("hidden");
@@ -62,7 +71,4 @@ function toggleSections(id) {
   document.getElementById("Pay-Bill-section").classList.add("hidden");
   // document.getElementById("").classList.add("hidden");
   document.getElementById(id).classList.remove("hidden");
-  // document.getElementById("button").classList("bg-blue-700");
-   this.classList.remove("btn-soft");
-   this.classList.add("bg-blue-600", "text-white");
 }
