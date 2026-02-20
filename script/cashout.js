@@ -1,9 +1,8 @@
-
-const balanceElement = document.getElementById("current-amount");
-const saveBalance = localStorage.getItem("balance");
-if (saveBalance !== null) {
-  balanceElement.innerText = saveBalance;
-}
+// const balanceElement = document.getElementById("current-amount");
+// const saveBalance = localStorage.getItem("balance");
+// if (saveBalance !== null) {
+//   balanceElement.innerText = saveBalance;
+// }
 
 document
   .getElementById("cashout-btn")
@@ -20,15 +19,15 @@ document
         if (withdrawAmount <= currentAmount) {
           let newBalance = machine("cash-out-amount", "current-amount", "out");
 
-          document.getElementById("current-amount").innerText = newBalance;
-          localStorage.setItem("balance", newBalance);
+          setBalance(newBalance);
+          // localStorage.setItem("balance", newBalance);
           alert(`withdraw successful, Boss
       Amount: $${withdrawAmount}
       Remaining Balance $${newBalance}`);
 
-          document.getElementById("cash-out-number").value = "";
-          document.getElementById("cash-out-amount").value = "";
-          document.getElementById("cash-out-pin").value = "";
+          valueEmpty("cashout-number");
+          valueEmpty("cash-out-amount");
+          valueEmpty("cashout-pin");
         } else {
           alert("Insufficient Balance");
         }

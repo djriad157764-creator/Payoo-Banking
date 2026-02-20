@@ -27,7 +27,7 @@ function machine(inputId, balanceId, type) {
 
   if (isNaN(amount) || amount <= 0) {
     alert("Invalid amount");
-    return;
+    return balance;
   }
   if (type === "add") {
     return balance + amount;
@@ -38,6 +38,19 @@ function machine(inputId, balanceId, type) {
     }
     return balance - amount;
   }
+}
+
+// set balance
+
+function setBalance(balance) {
+  const newBalance = document.getElementById("current-amount");
+  newBalance.innerText = balance;
+}
+
+// this function input value 0 ""
+
+function valueEmpty(inputValue) {
+  document.getElementById(inputValue).value = "";
 }
 
 // button transition all btn
@@ -62,6 +75,8 @@ navBtn.forEach((button) => {
     }
   });
 });
+
+// section hide and show
 
 function toggleSections(id) {
   document.getElementById("addMoney-section").classList.add("hidden");
