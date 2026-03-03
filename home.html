@@ -45,7 +45,9 @@
     </style>
   </head>
   <body class="w-[450px] w-11/12 mx-auto">
-    <header class="flex justify-between items-center p-4 sticky top-0 z-10 bg-base-100 border-b-2 border-base-300 mt-2">
+    <header
+      class="flex justify-between items-center p-4 sticky top-0 z-10 bg-base-100 border-b-2 border-base-300 mt-2"
+    >
       <div class="flex gap-2">
         <div class="w-[60px]">
           <img src="./assets/logo.png" alt="" />
@@ -81,7 +83,8 @@
 
       <div class="mt-6 grid grid-cols-3 gap-4">
         <div class="">
-          <button data-id="addMoney-section"
+          <button
+            data-id="addMoney-section"
             id="addmoney-section-btn"
             class="btn-tab btn btn-soft border-1 border-neutral/10 rounded-[12px] w-[123px] h-[90px] py-5 px-6 flex-col"
           >
@@ -90,7 +93,8 @@
           </button>
         </div>
         <div class="">
-          <button data-id="cash-out-section"
+          <button
+            data-id="cash-out-section"
             id="cash-out-btn"
             class="btn-tab btn btn-soft border-1 border-neutral/10 rounded-[12px] w-[123px] rounded-3 h-[90px] py-5 px-6 flex-col"
           >
@@ -99,7 +103,8 @@
           </button>
         </div>
         <div class="">
-          <button data-id="Transfer-Money-section"
+          <button
+            data-id="Transfer-Money-section"
             class="btn-tab btn btn-soft border-1 border-neutral/10 rounded-[12px] w-[123px] rounded-3 h-[90px] py-5 px-6 flex-col"
           >
             <img class="w-6 h-6 mx-auto" src="./assets/opt-3.png" alt="" />
@@ -107,7 +112,8 @@
           </button>
         </div>
         <div class="">
-          <button data-id="Bonus-section"
+          <button
+            data-id="Bonus-section"
             class="btn-tab btn btn-soft border-1 border-neutral/10 rounded-[12px] w-[123px] rounded-3 h-[90px] py-5 px-6 flex-col"
           >
             <img class="w-6 h-6 mx-auto" src="./assets/opt-4.png" alt="" />
@@ -115,7 +121,8 @@
           </button>
         </div>
         <div class="">
-          <button data-id="Pay-Bill-section"
+          <button
+            data-id="Pay-Bill-section"
             class="btn-tab btn btn-soft border-1 border-neutral/10 rounded-[12px] w-[123px] rounded-3 h-[90px] py-5 px-6 flex-col"
           >
             <img class="w-6 h-6 mx-auto" src="./assets/opt-5.png" alt="" />
@@ -148,8 +155,11 @@
             <label class="label text-base text-neutral/70 font-semibold"
               >Select A Bank</label
             >
-            <select id="select-bank" class="select text-base my-2 w-full border-none mb-4 bg-base-300 rounded-full">
-              <option disabled selected ">Select Bank</option>
+            <select
+              id="select-bank"
+              class="select text-base my-2 w-full border-none mb-4 bg-base-300 rounded-full"
+            >
+              <option disabled selected>Select Bank</option>
               <option value="Janata">Janata Bank</option>
               <option value="Agrani">Agrani Bank</option>
               <option value="Islami">Islami Bank</option>
@@ -195,7 +205,7 @@
       </div>
     </section>
 
-<!-- cash-out-section -->
+    <!-- cash-out-section -->
 
     <section
       id="cash-out-section"
@@ -250,7 +260,7 @@
       </div>
     </section>
 
-<!-- Transfer-Money-section -->
+    <!-- Transfer-Money-section -->
 
     <section
       id="Transfer-Money-section"
@@ -305,7 +315,7 @@
       </div>
     </section>
 
-<!-- Bonus-section -->
+    <!-- Bonus-section -->
 
     <section
       id="Bonus-section"
@@ -317,7 +327,6 @@
       >
         <div class="card-body">
           <fieldset class="fieldset">
-          
             <label class="label text-base text-neutral/70 font-semibold"
               >Enter Coupon Card</label
             >
@@ -326,7 +335,7 @@
               minlength="6"
               maxlength="6"
               type="password"
-              class="input w-full border-none mb-4 text-base my-2  bg-base-300 rounded-full"
+              class="input w-full border-none mb-4 text-base my-2 bg-base-300 rounded-full"
               placeholder="Get Your Bonus"
             />
 
@@ -341,23 +350,24 @@
       </div>
     </section>
 
-<!-- Pay Bill section  -->
+    <!-- Pay Bill section  -->
 
     <section
       id="Pay-Bill-section"
       class="hidden mt-6 p-6 bg-base-300 rounded-[24px]"
     >
       <h1 class="text-[18px] font-semibold text-neutral/90">Pay Bill</h1>
-      <div
-        class="card bg-base-100 mx-auto rounded-[24px] mt-8 shadow-sm mx-auto"
-      >
+      <div class="card bg-base-100 rounded-[24px] mt-8 shadow-sm mx-auto">
         <div class="card-body">
           <fieldset class="fieldset">
             <label class="label text-base text-neutral/70 font-semibold"
               >Select To Pay</label
             >
-            <select id="Pay-Bill-bank" class="select text-base my-2 w-full border-none mb-4 bg-base-300 rounded-full">
-              <option disabled selected ">Select Bank</option>
+            <select
+              id="Pay-Bill-bank"
+              class="select text-base my-2 w-full border-none mb-4 bg-base-300 rounded-full"
+            >
+              <option disabled selected>Select Bank</option>
               <option value="Janata">Janata Bank</option>
               <option value="Agrani">Agrani Bank</option>
               <option value="Islami">Islami Bank</option>
@@ -402,8 +412,11 @@
         </div>
       </div>
     </section>
-
+    <script src="./script/addMoney.js"></script>
+    <script src="./script/transferMoney.js"></script>
+    <script src="./script/collectBonus.js"></script>
     <script src="./script/machine.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/getBonus.js"></script>
   </body>
 </html>

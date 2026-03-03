@@ -22,8 +22,8 @@ document
           setBalance(newBalance);
           // localStorage.setItem("balance", newBalance);
           alert(`withdraw successful, Boss
-      Amount: $${withdrawAmount}
-      Remaining Balance $${newBalance}`);
+          Amount: $${withdrawAmount}
+          Remaining Balance $${newBalance}`);
 
           valueEmpty("cashout-number");
           valueEmpty("cash-out-amount");
